@@ -1,12 +1,8 @@
 import * as express from 'express'
-const appController = require('controllers.ts')
+import { validateCSV, updateDB } from './controllers'
 
 
+export const router = express.Router()
 
-const router = express.Router()
-
-router.post('/validate', appController.validateCSV)
-router.post('/update', appController)
-
-module.exports = router
-
+router.post('/validate', validateCSV)
+router.post('/update', updateDB)

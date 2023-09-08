@@ -1,14 +1,17 @@
 import express from 'express'
-import * as dotenv from "dotenv"
+import cors from 'cors'
+import * as dotenv from 'dotenv'
 dotenv.config()
-const routes = require('routes')
+import { router } from './routes'
 
 const { PORT } = process.env
 
 const app = express()
 
+app.use(cors())
+
 app.use(express.json())
-app.use(routes)
+app.use(router)
 
 app.get('/', (req, res) => {
     return res.status(200).send(`Página Inicial`)
