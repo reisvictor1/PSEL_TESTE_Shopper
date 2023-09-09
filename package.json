@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "back": "file:back",
+    "front": "file:front"
+  }
+}
