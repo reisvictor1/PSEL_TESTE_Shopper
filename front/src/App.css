@@ -1,38 +1,72 @@
 .App {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  background-color: #93d9c1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper{
+  padding: 60px 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.wrapper .file_input::-webkit-file-upload-button{
+  visibility: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper .file-input::before{
+  content: 'Selecione um arquivo .csv';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.product-list{
+
+  margin: 30px 100px
+
+}
+
+.product-list .product{
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+
+}
+
+
+.product-list .product div{
+  width: 100%;
+  border: 1px solid black;
+}
+
+.light-green{
+  background-color: #93d9c1;
+}
+
+.dark-green{
+  background-color: #25c791;
+}
+
+.wrapper .btnContainer{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 10px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper .btnContainer button{
+  margin: 0 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
